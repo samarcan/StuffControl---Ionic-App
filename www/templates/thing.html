@@ -1,0 +1,24 @@
+<ion-view view-title="{{thing_details.name}} <i id='' class = 'green icon ion-disc'></i>">
+
+  <ion-content>
+ <ion-list>
+
+  <div class="item item-divider">
+    Controladores
+  </div>
+  <ion-item ng-repeat="controller in thing_details.controllers" href="#/app/controller/{{thing_details.key}}/{{controller.identifier}}">
+  <i ></i>
+    {{controller.identifier}}
+  </ion-item>
+  <div class="item item-divider">
+    Sensores
+  </div>
+  <ion-item ng-repeat="sensor in thing_details.sensors" href="#/app/sensor/{{thing_details.key}}/{{sensor.identifier}}">
+  <i ></i>
+    {{sensor.identifier}}
+  </ion-item>
+
+</ion-list>
+<toaster-container></toaster-container>
+  </ion-content>
+</ion-view>

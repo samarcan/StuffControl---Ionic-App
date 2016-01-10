@@ -1,0 +1,14 @@
+<ion-view view-title="Things">
+  <ion-content>
+  <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+    <ion-list>
+      <ion-item ng-repeat="thing in things" href="#/app/things/{{thing.id}}">
+      <i id="{{thing.key}}"></i>
+        {{thing.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
